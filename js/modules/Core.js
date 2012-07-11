@@ -1,24 +1,20 @@
 define("Core", ["MusicEntity"], function(musicEntity) {
-	var secret = "secret";
+
+	var self = this;
+	debug.warn("core, self", self);
 
 	return {
 		helloFunction: function() {
-			console.log(musicEntity.getSourceUrl());
 
-			console.log("Modifying source url");
+			debug.info("Before", musicEntity.getSourceUrl());
 
-			var su = musicEntity.getSourceUrl();
+			musicEntity.setSourceUrl("blaha");
 
-			su = "blah";
+			debug.info("After", musicEntity.getSourceUrl());
 
-			console.log("su", su, "srcurl", musicEntity.getSourceUrl());
+			debug.info("Data", musicEntity.getMusicData());
 
-			console.log(musicEntity.sourceUrl);
-			return "hello";
-		},
-
-		secretFunction: function() {
-			return secret;
+			return "OK";
 		}
 	};
 });
