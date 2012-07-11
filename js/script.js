@@ -7,7 +7,8 @@ jQuery(document).ready(function() {
 		paths: {
 			'bootstrap': "libs/bootstrap/bootstrap.min",
 			'debug': "libs/ba.debug",
-			'Core': "modules/Core"
+			'Core': "modules/Core",
+			'MusicEntity': "modules/MusicEntity"
 		},
 		shim: {
 			'Core': {
