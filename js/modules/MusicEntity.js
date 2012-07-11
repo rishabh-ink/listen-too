@@ -1,0 +1,3 @@
+define("MusicEntity", function() {
+
+});
