@@ -1,24 +1,11 @@
 define("MusicEntity", ["debug"], function() {
-
 	var self = this;
 
-	debug.warn("self", self);
-
-	self.sourceUrl = "data/dummy.json";
-
-	self.musicData = {'content': "taylor swift"};
+	var initialize = function() {
+		debug.info("MusicEntity initialized");
+	}
 
 	return {
-		setSourceUrl: function(sourceUrl) {
-			self.sourceUrl = sourceUrl;
-		},
-
-		getSourceUrl: function() {
-			return self.sourceUrl;
-		},
-
-		getMusicData: function() {
-			return self.musicData;
-		}
-	};
+		initialize: initialize
+	}
 });

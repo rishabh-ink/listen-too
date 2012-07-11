@@ -1,20 +1,10 @@
-define("Core", ["MusicEntity"], function(musicEntity) {
-
-	var self = this;
-	debug.warn("core, self", self);
+define("Core", ["Artist"], function(artist) {
+	var initialize = function() {
+		artist.initialize();
+		debug.info("Core initialized");
+	}
 
 	return {
-		helloFunction: function() {
-
-			debug.info("Before", musicEntity.getSourceUrl());
-
-			musicEntity.setSourceUrl("blaha");
-
-			debug.info("After", musicEntity.getSourceUrl());
-
-			debug.info("Data", musicEntity.getMusicData());
-
-			return "OK";
-		}
-	};
+		initialize: initialize
+	}
 });

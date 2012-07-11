@@ -2,25 +2,26 @@
 
 */
 
-jQuery(document).ready(function() {
-	require.config({
-		paths: {
-			'bootstrap': "libs/bootstrap/bootstrap.min",
-			'debug': "libs/ba.debug",
-			'Core': "modules/Core",
-			'MusicEntity': "modules/MusicEntity"
-		},
-		shim: {
-			'Core': {
-				deps: ["bootstrap", "debug"],
-				exports: "Core"
-			}
+require.config({
+	paths: {
+		'jquery': "libs/jquery-1.7.2.min",
+		'bootstrap': "libs/bootstrap/bootstrap.min",
+		'debug': "libs/ba.debug",
+		'domReady': "libs/domReady",
+		'Core': "modules/Core",
+		'MusicEntity': "modules/MusicEntity",
+		'Artist': "modules/Artist"
+	},
+	shim: {
+		'Core': {
+			deps: ["jquery", "bootstrap", "debug"],
+			exports: "Core"
 		}
-	});
+	}
+});
 
-	require(["Core"], function(Core) {
-		debug.log("All systems ready.");
-
-		debug.log(Core.helloFunction());
+require(["domReady", "Core"], function(domReady, Core) {
+	domReady(function() {
+		Core.initialize();
 	});
 });
