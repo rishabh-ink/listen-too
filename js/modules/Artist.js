@@ -1,7 +1,7 @@
-define("Artist", ["debug", "jquery"], function() {
-	var API_SECRET_KEY = "FPSSDUWHUMOEZ664A";
+define(["debug", "jquery"], function() {
+	var API_KEY = "FPSSDUWHUMOEZ664A";
 	var dataUrl = "http://developer.echonest.com/api/v4/artist/similar"	+
-		"?api_key=" + API_SECRET_KEY +
+		"?api_key=" + API_KEY +
 		"&name=Taylor+Swift&format=json&results=5&start=0";
 
 	var artistData = {};
@@ -14,6 +14,14 @@ define("Artist", ["debug", "jquery"], function() {
 	}
 
 	return {
-		initialize: initialize
+		initialize: initialize,
+
+		getDataUrl: function() {
+			return dataUrl;
+		},
+
+		setDataUrl: function(du) {
+			dataUrl = dataUrl;
+		}
 	}
 });
