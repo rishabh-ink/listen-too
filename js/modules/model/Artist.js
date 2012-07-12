@@ -1,12 +1,12 @@
+"use strict";
+
 define(["knockoutjs"], function() {
-	var artistName =
+	var artist = {};
 
 	var toString = function() {
 		return {
 			classname: "model.Artist",
-			members: {
-				API_KEY: API_KEY
-			}
+			members: {}
 		}
 	}
 

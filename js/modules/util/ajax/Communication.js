@@ -1,6 +1,8 @@
+"use strict";
+
 define(["jquery", "debug"], function(jQuery) {
 	var communicate = function(payload) {
-		debug.info(toString(), "Communicating with server...");
+		debug.info(toString(), "Communicating with server...", payload);
 	}
 
 	var toString = function() {

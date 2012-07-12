@@ -1,3 +1,5 @@
+"use strict";
+
 define(["model.Artist"], function(artist) {
 	debug.info(artist.toString());
 
@@ -12,5 +14,5 @@ define(["model.Artist"], function(artist) {
 
 	return {
 		toString: toString
-	}
+	};
 });
