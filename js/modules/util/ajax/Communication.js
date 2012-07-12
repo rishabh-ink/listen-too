@@ -6,7 +6,7 @@ define(["jquery", "debug"], function(jQuery) {
 	var toString = function() {
 		return {
 			classname: "util.ajax.Communicate",
-			members: null
+			members: {}
 		}
 	}
 

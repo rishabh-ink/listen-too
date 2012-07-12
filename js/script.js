@@ -4,24 +4,30 @@
 
 require.config({
 	paths: {
-		'jquery': "libs/jquery-1.7.2.min",
-		'bootstrap': "libs/bootstrap/bootstrap.min",
+		'jquery': "libs/jquery-1.7.2",
+		'bootstrap': "libs/bootstrap/bootstrap",
 		'debug': "libs/ba.debug",
 		'domReady': "libs/domReady",
-		'Core': "modules/Core",
-		'MusicEntity': "modules/MusicEntity",
-		'Artist': "modules/Artist"
+
+		'viewmodel.Core': "modules/viewmodel/Core",
+		'model.Artist': "modules/model/Artist",
+		'util.ajax.Communication': "modules/util/ajax/Communication",
+		'util.error.ErrorHandler': "modules/util/error/ErrorHandler"
 	},
 	shim: {
-		'Core': {
+		'viewmodel.Core': {
 			deps: ["jquery", "bootstrap", "debug"],
-			exports: "Core"
+			exports: "viewmodel.Core"
+		},
+		'model.Artist': {
+			deps: ["jquery", "debug"],
+			exports: "model.Artist"
 		}
 	}
 });
 
-require(["domReady", "Core"], function(domReady, Core) {
+require(["domReady", "viewmodel.Core"], function(domReady, core) {
 	domReady(function() {
-		Core.initialize();
+		debug.log(core.toString());
 	});
 });

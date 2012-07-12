@@ -1,0 +1,3 @@
+define(["model.Artist"], function() {
+
+});

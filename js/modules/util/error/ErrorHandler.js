@@ -2,7 +2,11 @@ define(["debug"], function() {
 	var toString = function() {
 		return {
 			classname: "util.error.ErrorHandler",
-			members: null
+			members: {}
 		}
+	}
+
+	return {
+		toString: toString
 	}
 });
