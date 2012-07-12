@@ -8,6 +8,7 @@ require.config({
 		'bootstrap': "libs/bootstrap/bootstrap",
 		'debug': "libs/ba.debug",
 		'domReady': "libs/domReady",
+		'knockoutjs': "libs/knockout-2.1.0.debug.js"
 
 		'viewmodel.Core': "modules/viewmodel/Core",
 		'model.Artist': "modules/model/Artist",

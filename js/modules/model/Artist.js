@@ -1,8 +1,5 @@
-define(["debug", "jquery", "util.ajax.Communication", "util.error.ErrorHandler"], function(D, JQ, communication, errorHandler) {
-	var API_KEY = "FPSSDUWHUMOEZ664A";
-
-	debug.info("errorHandler", errorHandler.toString());
-	debug.info("Artist initialized");
+define(["knockoutjs"], function() {
+	var artistName =
 
 	var toString = function() {
 		return {
