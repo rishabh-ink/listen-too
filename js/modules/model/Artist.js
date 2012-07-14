@@ -1,11 +1,9 @@
 "use strict";
 
-define(["jquery", "use!debug", "knockoutjs"], function() {
+define(["jquery", "use!debug", "knockoutjs"], function(jQuery, debug, ko) {
 	var content = {
-		name: "Taylor Swift"
+		name: ko.observable("Taylor Swift")
 	};
-
-	var dummy = "blah blah";
 
 	var toString = function() {
 		return {
@@ -18,7 +16,6 @@ define(["jquery", "use!debug", "knockoutjs"], function() {
 
 	return {
 		toString: toString,
-		content: content,
-		dummy: dummy
+		content: content
 	}
 });

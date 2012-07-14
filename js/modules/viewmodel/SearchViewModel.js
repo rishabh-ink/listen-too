@@ -9,7 +9,6 @@ define(["model.Artist","jquery", "knockoutjs", "use!debug"], function(artist, jQ
 	debug.log("SearchViewModel initialized!", jQuery, ko);
 
 	var artist = ko.observable(artist);
-	var dummy = ko.observable('dummy');
 
 	/**
 	 * SearchViewModel
@@ -21,15 +20,13 @@ define(["model.Artist","jquery", "knockoutjs", "use!debug"], function(artist, jQ
 		return {
 			classname: "SearchViewModel",
 			members: {
-				artist: artist(),
-				dummy: dummy
+				artist: artist()
 			}
 		}
 	}
 
 	return {
 		toString: toString,
-		artist: artist(),
-		dummy: dummy()
+		artist: artist()
 	};
 });
