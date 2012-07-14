@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "debug"], function() {
+define(["jquery", "use!debug"], function() {
 	var toString = function() {
 		return {
 			classname: "util.error.ErrorHandler",

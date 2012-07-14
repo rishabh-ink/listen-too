@@ -5,7 +5,7 @@ define(["model.Artist", "util.ajax.Communication"], function(artist, communicati
 		communication.communicate({
 			url: "http",
 			data: {
-				api_key: "FPSSDUWHUMOEZ664A",
+				api_key: ,
 				name: "Taylor Swift"
 			}
 		});

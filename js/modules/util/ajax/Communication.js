@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "debug"], function(jQuery) {
+define(["jquery", "use!debug"], function(jQuery) {
 	var communicate = function(payload) {
 		debug.info(toString(), "Communicating with server...", payload);
 	}

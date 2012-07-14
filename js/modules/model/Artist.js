@@ -1,16 +1,24 @@
 "use strict";
 
-define(["knockoutjs"], function() {
-	var artist = {};
+define(["jquery", "use!debug", "knockoutjs"], function() {
+	var content = {
+		name: "Taylor Swift"
+	};
+
+	var dummy = "blah blah";
 
 	var toString = function() {
 		return {
 			classname: "model.Artist",
-			members: {}
+			members: {
+				content: content
+			}
 		}
 	}
 
 	return {
-		toString: toString
+		toString: toString,
+		content: content,
+		dummy: dummy
 	}
 });

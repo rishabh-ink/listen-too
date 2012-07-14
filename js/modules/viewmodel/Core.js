@@ -1,9 +1,10 @@
 "use strict";
 
-define(["model.Artist"], function(artist) {
-	debug.info(artist.toString());
+define(["model.Artist", "viewmodel.SearchViewModel", "jquery", "use!bootstrap", "knockoutjs", "use!debug"], function(artist, searchViewModel, jquery, bootstrap, ko, debug) {
+	debug.info("Core initialized", searchViewModel.toString());
 
-	debug.info("Core initialized");
+	debug.info("Applying KnockoutJS bindings...", searchViewModel);
+	ko.applyBindings(searchViewModel);
 
 	var toString = function() {
 		return {
