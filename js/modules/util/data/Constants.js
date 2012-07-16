@@ -3,7 +3,7 @@
 /**
  * Constants
  * The Constants module stores global constants required in the application.
- * @author rishabhsrao
+ * @author See /humans.txt
  */
 define({
 	echonest: {

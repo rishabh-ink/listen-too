@@ -3,7 +3,7 @@
 /**
  * SimilarArtistsViewModel
  * The SimilarArtistsViewModel module.
- * @author
+ * @author rishabhsrao
  */
 define(["jquery"], function() {
 
@@ -19,7 +19,7 @@ define(["jquery"], function() {
 			classname: "SimilarArtistsViewModel",
 			members: {}
 		}
-	}
+	};
 
 	return {
 		toString: toString

@@ -15,21 +15,25 @@ require.config({
 		'knockoutjs': "libs/knockout-2.1.0.debug", // knockoutjs.com
 		// /libraries
 
+		// application core
+		'Core': "modules/Core",
+		// /application core
+
 		// models
 		'model.Artist': "modules/model/Artist",
 		// /models
 
 		// view-models
-		'viewmodel.Core': "modules/viewmodel/Core",
+		'viewmodel.Root': "modules/viewmodel/Root",
 		'viewmodel.ArtistViewModel': "modules/viewmodel/ArtistViewModel",
 		'viewmodel.SearchViewModel': "modules/viewmodel/SearchViewModel",
-		'viewmodel.SimilarArtistViewModel': "modules/viewmodel/SimilarArtistViewModel",
+		'viewmodel.SimilarArtistsViewModel': "modules/viewmodel/SimilarArtistsViewModel",
 		// /view-models
 
 		// utilities
 		'util.ajax.Communication': "modules/util/ajax/Communication",
 		'util.error.ErrorHandler': "modules/util/error/ErrorHandler",
-		'util.data.Constants': "modules/util/Constants"
+		'util.data.Constants': "modules/util/data/Constants"
 		// /utilities
 	},
 	// use.js configuration for non-amd libraries
@@ -44,8 +48,9 @@ require.config({
 	// /use.js configuration for non-amd libraries
 });
 
-require(["domready", "viewmodel.Core"], function(domReady, core) {
+require(["domready", "Core"], function(domReady, core) {
 	domReady(function() {
-		debug.log(core.toString());
+		debug.info("Starting application... Please stand by...");
+		core.initialize();
 	});
 });

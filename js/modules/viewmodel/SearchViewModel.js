@@ -5,26 +5,43 @@
  * The SearchViewModel module handles the search view in the UI.
  * @author rishabhsrao
  */
-define(["model.Artist","jquery", "knockoutjs", "use!debug"], function(artist, jQuery, ko) {
-	debug.log("SearchViewModel initialized!", jQuery, ko);
+define(["jquery", "knockoutjs", "use!debug"], function(jQuery, ko, debug) {
+	/**
+	 * The query string typed in by the user in the search input text box.
+	 */
+	var searchQuery = ko.observable("");
+
+	/**
+	 * Clears this view and returns it to it's default state.
+	 */
+	var clear = function() {
+		searchQuery("");
+	};
+
+	/**
+	 * Updates this view with the given data relevent to this view.
+	 */
+	var update = function(data) {
+	};
 
 	/**
 	 * SearchViewModel
 	 * Returns a string representation of the <code>SearchViewModel</code>
 	 * class.
-	 * @author rishabhsrao
 	 */
 	var toString = function() {
 		return {
 			classname: "SearchViewModel",
 			members: {
-				artist: artist
+				searchQuery: searchQuery
 			}
 		}
-	}
+	};
 
 	return {
-		toString: toString,
-		artist: artist
+		searchQuery: searchQuery,
+		clear: clear,
+		update: update,
+		toString: toString
 	};
 });

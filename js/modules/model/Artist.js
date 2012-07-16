@@ -10,7 +10,7 @@ define(["jquery", "use!debug", "knockoutjs"], function(jQuery, debug, ko) {
 			name: name
 			}
 		}
-	}
+	};
 
 	return {
 		toString: toString,
